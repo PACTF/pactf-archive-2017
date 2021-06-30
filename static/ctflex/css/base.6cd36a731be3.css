@@ -1,1 +1,269 @@
-body{margin:0;padding:0;background-color:#add8e6}.page-title>.container,#content,#messages{max-width:55em;margin:0 auto}#content{margin-top:1em;padding:1em}.page-title{background-color:#f5f5f5;color:#fff;padding:20px 0;overflow:hidden;margin-bottom:1em}.page-title h1{margin:0;padding:0;line-height:100%;display:inline-block;color:#000}html{position:relative;min-height:100%}footer{position:absolute;bottom:0;width:100%;text-align:center;height:135px;background-color:#f5f5f5}body{margin-bottom:135px}#footer-sponsors{height:90px;overflow:hidden}#footer-text{margin-top:.5em}footer>.container{}footer>.container>p{margin-bottom:0}#footer-sponsors{padding-top:15px}#footer-sponsors a{padding-left:10px;padding-right:10px}#footer-sponsors img{width:auto;height:75px}body{padding-top:45px;padding-bottom:20px}p.navbar-text{margin:0;padding:12px 15px}.navbar-text{line-height:21px}@media(max-width:767px){p.navbar-text{margin:0;padding:10px 15px}}#unread-announcements-badge{margin-left:3px;display:none}.errornote{color:red}.errorlist{margin-top:.5em;margin-bottom:0}.form-group>.errorlist>li{margin-left:15px;margin-right:15px;margin-bottom:.25em;padding:.5em;padding-right:2.25em}.control-label{font-weight:700}select.form-control{padding:0 25px 0 12px;background-image:url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiBmaWxsPSIjNTU1NTU1IiAKCSB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSItMjYxIDE0NS4yIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC0yNjEgMTQ1LjIgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZD0iTS0yNDUuMywxNTYuMWwtMy42LTYuNWwtMy43LDYuNSBNLTI1Mi43LDE1OWwzLjcsNi41bDMuNi02LjUiLz4KPC9zdmc+);background-repeat:no-repeat;background-position:right center;-webkit-appearance:none;-moz-appearance:none;appearance:none}.jumbotron #messages{padding-top:0}#messages{padding-top:.5em}.alert-success .alert-type:before{content:"Success!"}.alert-danger .alert-type:before{content:"Error!"}.alert-warning .alert-type:before{content:"Warning: "}.alert-info .alert-type:before{content:"Info: "}body.modal-open div.modal-backdrop{z-index:0}.page-title{overflow:visible}.page-title h1{padding-bottom:.2em}#window-dropdown-container{float:right}.glyphicon-color.glyphicon-ok-sign{color:#5cb85c}.glyphicon-color.glyphicon-info-sign{color:#428bca}.glyphicon-color.glyphicon-remove-sign{color:#d9534f}.text-muted a{color:#999;text-decoration:underline}.text-muted a:hover{color:#00526e}.bold{font-weight:700}.display-none{display:none}.italics{font-style:italic}#team-members .user-container .user-username{margin-left:.5em}.panel .list-group-item span.bold{margin-right:.25em}a.link-undercover{color:#000;text-decoration:none}a.link-undercover:visited{color:#000;text-decoration:none}
+/* TODO(Yatharth): Switch to LESS */
+
+/* Body */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: lightblue;
+}
+
+.page-title > .container, #content, #messages {
+    /* TODO(Yatharth): Look into https://stackoverflow.com/questions/9730263/setting-max-width-for-body-using-bootstrap */
+    max-width: 55em;
+    margin: 0 auto;
+}
+
+#content {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+/* Title */
+
+.page-title {
+    background-color: #f5f5f5;
+    color: #fff;
+    padding: 20px 0;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.page-title h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    display: inline-block;
+    color: #000;
+}
+
+/* Footer */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    text-align: center;
+
+    /* Set the fixed height of the footer here */
+    height: 135px;
+    background-color: #f5f5f5;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 135px;
+}
+
+#footer-sponsors {
+    height: 90px;
+    overflow: hidden;
+}
+
+#footer-text {
+    margin-top: 0.5em;
+}
+
+footer > .container {
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+}
+
+footer > .container > p {
+    margin-bottom: 0;
+}
+
+#footer-sponsors {
+    padding-top: 15px;
+}
+
+#footer-sponsors a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#footer-sponsors img {
+    width: auto;
+    height: 75px;
+}
+
+/* Navbar */
+
+body {
+    /* Move down content because because of navbar */
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+p.navbar-text {
+    margin: 0;
+    padding: 12px 15px;
+}
+
+.navbar-text {
+    line-height: 21px;
+}
+
+@media (max-width: 767px) {
+    p.navbar-text {
+        margin: 0;
+        padding: 10px 15px;
+    }
+}
+
+#unread-announcements-badge {
+    margin-left: 3px;
+    display: none;
+}
+
+/* Forms */
+
+.errornote {
+    color: red;
+}
+
+.errorlist {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.form-group > .errorlist > li {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0.25em;
+    padding: 0.5em;
+    padding-right: 2.25em;
+}
+
+.control-label {
+    font-weight: bold;
+}
+
+select.form-control {
+    padding: 0 25px 0 12px;
+
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Messages */
+
+.jumbotron #messages {
+    /*margin-top: -30px;*/
+    padding-top: 0;
+}
+
+#messages {
+    padding-top: 0.5em;
+}
+
+/* Messages Accessibility */
+
+.alert-success .alert-type:before {
+    content: "Success!"
+}
+
+.alert-danger .alert-type:before {
+    content: "Error!"
+}
+
+.alert-warning .alert-type:before {
+    content: "Warning: "
+}
+
+.alert-info .alert-type:before {
+    content: "Info: "
+}
+
+/* Modals */
+
+body.modal-open div.modal-backdrop {
+    /* Fix modals being tinted out too */
+    z-index: 0;
+}
+
+/* Window Dropdown */
+
+.page-title {
+    overflow: visible;
+}
+
+.page-title h1 {
+    padding-bottom: 0.2em;
+}
+
+#window-dropdown-container {
+    float: right;
+}
+
+/* Colored glyphicons */
+
+.glyphicon-color.glyphicon-ok-sign {
+    color: #5cb85c;
+}
+
+.glyphicon-color.glyphicon-info-sign {
+    color: #428bca;
+}
+
+.glyphicon-color.glyphicon-remove-sign {
+    color: #d9534f;
+}
+
+/* Misc */
+
+.text-muted a {
+    color: #999;
+    text-decoration: underline;
+}
+
+.text-muted a:hover {
+    color: #00526e;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.display-none {
+    display: none;
+}
+
+.italics {
+    font-style: italic;
+}
+
+/* Account page */
+
+#team-members .user-container .user-username {
+    margin-left: 0.5em;
+}
+
+.panel .list-group-item span.bold {
+    margin-right: 0.25em;
+}
+
+/* About Page */
+
+a.link-undercover {
+    color: black;
+    text-decoration: none;
+}
+
+a.link-undercover:visited {
+    color: black;
+    text-decoration: none;
+}
